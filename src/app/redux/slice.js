@@ -18,10 +18,17 @@ const userSlice = createSlice({
                     state.users.push(data);
                     console.log("User added to state:", data);
                 }
+            },
+            removeUser: {   
+                reducer(state, action) {
+                    const userId = action.payload.id;
+                    state.users = state.users.filter((user) => user.id !== userId);
+                    console.log("User removed from state with ID:", userId);
+                }
             }
         },
     },
 );
 
-export const { addUser } = userSlice.actions;
+export const { addUser, removeUser } = userSlice.actions;
 export default userSlice.reducer;
