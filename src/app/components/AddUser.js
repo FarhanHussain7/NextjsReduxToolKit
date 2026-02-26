@@ -14,7 +14,7 @@ export default function AddUser() {
   const handleAddUser = () => {
     // Logic to add user goes here
     dispatch(addUser({ id: Date.now(), name: userName }));  
-    console.log("User added:", userName);
+    // console.log("User added:", userName);
     setUserName(""); // Clear input after adding user
   };
   return (

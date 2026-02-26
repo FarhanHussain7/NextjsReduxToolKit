@@ -6,7 +6,7 @@ import "./style.css";
 export default function DisplayUser() {
   const userData = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
-  console.log("User data from Redux store:", userData);
+  // console.log("User data from Redux store:", userData);
 
   return (
     <div>
@@ -19,7 +19,11 @@ export default function DisplayUser() {
               <div key={user.id} className="user-card">
                 <p><strong>ID:</strong> {user.id}</p>
                 <p><strong>Name:</strong> {user.name}</p>
-                <p><button onClick={() => dispatch(removeUser(user.id))}>Remove</button></p>
+                <p>
+                  <button onClick={() => dispatch(removeUser(user.id))}>
+                     Remove
+                  </button>
+                </p>
               </div>
             ))
           ) : (

@@ -16,12 +16,12 @@ const userSlice = createSlice({
                     name: action.payload.name,
                 };
                     state.users.push(data);
-                    console.log("User added to state:", data);
+                    // console.log("User added to state:", data);
                 }
             },
-            removeUser: {   
+            removeUser: {
                 reducer(state, action) {
-                    const userId = action.payload.id;
+                    const userId = action.payload; // no .id here
                     state.users = state.users.filter((user) => user.id !== userId);
                     console.log("User removed from state with ID:", userId);
                 }
