@@ -3,6 +3,8 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { removeUser } from "../redux/slice";
 import "./style.css";
+import Addtodo from "../todolist/page";
+import Link from "next/link";
 export default function DisplayUser() {
   const userData = useSelector((state) => state.users.users);
   const dispatch = useDispatch();
@@ -23,6 +25,7 @@ export default function DisplayUser() {
                   <button onClick={() => dispatch(removeUser(user.id))}>
                      Remove
                   </button>
+                  <button><Link href="/todolist">Add Todo</Link></button>
                 </p>
               </div>
             ))
