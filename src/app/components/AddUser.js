@@ -1,5 +1,6 @@
 "use client";
 import "./style.css";
+import Link from "next/link";
 import { useState } from "react";
 import { addUser } from "../redux/slice";
 import { useDispatch } from "react-redux";
@@ -27,6 +28,8 @@ export default function AddUser() {
         value={userName} 
         onChange={handleInputChange} />
         <button onClick={handleAddUser}>Add User</button>
+        <button><Link href="/todolist">Add Todo</Link></button>
+
     </div>
   );
 }   
