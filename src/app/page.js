@@ -129,6 +129,9 @@ export default function Home() {
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
                 View Demo
               </button>
+              <button>
+                Hello
+              </button>
             </div>
           </div>
         </div>
